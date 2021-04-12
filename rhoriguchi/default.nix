@@ -1,8 +1,8 @@
 { pkgs, config, lib, ... }:
-let rhoriguchi = "${(import ../rhoriguchi-nixos-setup.nix).path}/configuration/users/rhoriguchi";
+let rhoriguchi = "${(import ../rhoriguchi-nixos-setup.nix).path}/configuration/rhoriguchi";
 in {
   imports = [
-    (import "${rhoriguchi}/../home-manager.nix")
+    (import "${rhoriguchi}/home-manager.nix")
 
     (import "${rhoriguchi}/alacritty.nix")
     (import "${rhoriguchi}/flameshot.nix")

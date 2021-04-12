@@ -1,5 +1,5 @@
 { pkgs, config, lib, ... }: {
-  imports = [ (import "${(import ../../rhoriguchi-nixos-setup.nix).path}/configuration/users/rhoriguchi/firefox") ];
+  imports = [ (import "${(import ../../rhoriguchi-nixos-setup.nix).path}/configuration/rhoriguchi/firefox") ];
 
   home-manager.users.rhoriguchi = {
     home.file.".mozilla/firefox/default/bookmarks.html".source = lib.mkForce ./bookmarks.html;
