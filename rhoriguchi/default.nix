@@ -10,6 +10,7 @@ in {
     (import "${rhoriguchi}/git")
     (import "${rhoriguchi}/gnome")
     (import "${rhoriguchi}/htop")
+    (import "${rhoriguchi}/onedrive.nix")
     (import "${rhoriguchi}/ssh.nix")
     (import "${rhoriguchi}/vscode.nix")
     (import "${rhoriguchi}/zsh.nix")
@@ -19,7 +20,6 @@ in {
     ./firefox
     ./maven
     ./npm
-    ./onedrive.nix
   ];
 
   home-manager.users.rhoriguchi = {
