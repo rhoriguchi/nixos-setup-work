@@ -4,9 +4,8 @@
         super.fetchFromGitHub {
           owner = "vlaci";
           repo = "openconnect-sso";
-          # TODO pin version once v0.7.3 released
-          rev = "b5ccc6ec500c80a444b60eabb0f33c11221645c7";
-          sha256 = "0798j46aqmmmazxxa218kzhcbg5ps3jvkiz8k5s3chh4s6acyprv";
+          rev = "v0.7.3";
+          sha256 = "126rm5zhdwxiyqv7fh2xilqw7q0s438d3laisjynlnc4ddnrdc3w";
         }
       }/nix" { pkgs = super; }).openconnect-sso;
   })
