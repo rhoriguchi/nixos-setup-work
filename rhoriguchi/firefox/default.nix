@@ -22,7 +22,11 @@
 
       profiles.default.settings = {
         "browser.download.dir" = lib.mkForce "${config.users.users.rhoriguchi.home}/Downloads";
-        "browser.startup.homepage" = lib.mkForce (builtins.concatStringsSep "|" [ "https://to-do.office.com/tasks/inbox" ]);
+        "browser.startup.homepage" = lib.mkForce (builtins.concatStringsSep "|" [
+          "https://to-do.office.com/tasks/inbox"
+          "https://outlook.office.com/mail/inbox"
+          "https://outlook.office.com/calendar/view/month"
+        ]);
       };
     };
   };
