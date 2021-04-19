@@ -137,7 +137,6 @@
       pkgs.spotify
       pkgs.sshpass
       pkgs.teams
-      pkgs.thunderbird
       pkgs.unzip
       pkgs.vscode
       pkgs.yarn
