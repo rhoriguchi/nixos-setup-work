@@ -127,9 +127,11 @@
       pkgs.haskellPackages.nixfmt
       pkgs.htop
       pkgs.jetbrains.idea-ultimate
+      pkgs.jetbrains.webstorm
       pkgs.kubernetes
       pkgs.libreoffice-fresh
       pkgs.maven
+      pkgs.nodejs
       pkgs.ntfs3g
       pkgs.openconnect-sso
       pkgs.openssl
