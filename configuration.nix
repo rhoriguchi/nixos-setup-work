@@ -156,7 +156,10 @@
       xkbVariant = "de_nodeadkeys";
 
       displayManager = {
-        gdm.enable = true;
+        gdm = {
+          enable = true;
+          wayland = false;
+        };
 
         sessionCommands = "${lib.getBin pkgs.xorg.xrandr}/bin/xrandr --setprovideroutputsource 2 0";
       };
