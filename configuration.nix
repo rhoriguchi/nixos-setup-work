@@ -136,6 +136,7 @@
       pkgs.ntfs3g
       pkgs.openconnect-sso
       pkgs.openssl
+      pkgs.postman
       pkgs.signal-desktop
       pkgs.spotify
       pkgs.sshpass
