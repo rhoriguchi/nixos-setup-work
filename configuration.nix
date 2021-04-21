@@ -160,6 +160,7 @@
       displayManager = {
         gdm = {
           enable = true;
+          # TODO remove once teams screen sharing works with wayland
           wayland = false;
         };
 
