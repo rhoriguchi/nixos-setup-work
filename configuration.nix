@@ -124,6 +124,7 @@
       pkgs.gitkraken
       pkgs.gnome3.dconf-editor
       pkgs.gnome3.networkmanager-openconnect
+      pkgs.google-chrome
       pkgs.haskellPackages.nixfmt
       pkgs.htop
       pkgs.jetbrains.idea-ultimate
