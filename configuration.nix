@@ -16,11 +16,6 @@
     kernelPackages = pkgs.linuxPackages_5_4;
   };
 
-  swapDevices = [{
-    device = "/swapfile";
-    size = (1024 * 16);
-  }];
-
   nixpkgs = {
     config.allowUnfree = true;
     overlays = (import "${(import ./rhoriguchi-nixos-setup.nix).path}/configuration/overlays") ++ (import ./overlays);
