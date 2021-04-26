@@ -133,6 +133,7 @@
       pkgs.libreoffice-fresh
       pkgs.maven
       pkgs.nodejs
+      pkgs.nodePackages.prettier
       pkgs.ntfs3g
       pkgs.openconnect-sso
       pkgs.openssl
