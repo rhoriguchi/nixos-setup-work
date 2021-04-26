@@ -128,7 +128,6 @@
       pkgs.haskellPackages.nixfmt
       pkgs.htop
       pkgs.jetbrains.idea-ultimate
-      pkgs.jetbrains.webstorm
       pkgs.kubernetes
       pkgs.libreoffice-fresh
       pkgs.maven
