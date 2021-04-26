@@ -122,6 +122,7 @@
       pkgs.git
       pkgs.git-crypt
       pkgs.gitkraken
+      pkgs.glances
       pkgs.gnome3.dconf-editor
       pkgs.gnome3.networkmanager-openconnect
       pkgs.google-chrome
