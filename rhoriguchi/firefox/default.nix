@@ -14,6 +14,7 @@
         pkgs.firefox-addons.octolinker
         pkgs.firefox-addons.open-in-browser
         pkgs.firefox-addons.privacy-badger
+        pkgs.firefox-addons.react-devtools
         pkgs.firefox-addons.tab-session-manager
         pkgs.firefox-addons.ublock-origin
         pkgs.firefox-addons.view-image
