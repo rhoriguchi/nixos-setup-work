@@ -12,7 +12,7 @@
       efi.canTouchEfiVariables = true;
     };
 
-    # TODO remove when openrazer drivers works on 5.10 and namespace with chrome / gitkraken work
+    # TODO remove when openrazer drivers works on 5.10 and namespace with chrome works
     kernelPackages = pkgs.linuxPackages_5_4;
   };
 
@@ -121,7 +121,6 @@
       pkgs.flameshot
       pkgs.git
       pkgs.git-crypt
-      pkgs.gitkraken
       pkgs.glances
       pkgs.gnome3.dconf-editor
       pkgs.gnome3.networkmanager-openconnect
