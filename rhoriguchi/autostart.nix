@@ -1,5 +1,5 @@
 { pkgs, lib, config, ... }:
-let packages = lib.unique (map (p: "${p.name}") (config.environment.systemPackages ++ config.users.users.rhoriguchi.packages));
+let packages = lib.unique (map (package: "${package.name}") (config.environment.systemPackages ++ config.users.users.rhoriguchi.packages));
 in {
   imports = [ (import "${(import ../rhoriguchi-nixos-setup.nix).path}/configuration/rhoriguchi/autostart.nix") ];
 
