@@ -2,7 +2,8 @@
   imports = [ <nixpkgs/nixos/modules/profiles/hardened.nix> ];
 
   security = {
-    apparmor.profiles = [ "${pkgs.apparmor-profiles}/share/apparmor/extra-profiles" ];
+    # TODO figure out how it works now
+    # apparmor.profiles = [ "${pkgs.apparmor-profiles}/share/apparmor/extra-profiles" ];
 
     lockKernelModules = false;
   };
