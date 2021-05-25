@@ -13,7 +13,7 @@
     systemPackages = [ pkgs.chkrootkit ];
   };
 
-  services.xserver.desktopManager.gnome3.extraGSettingsOverrides = ''
+  services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
     [org.gnome.desktop.session]
     idle-delay=${toString (5 * 60)}
   '';
