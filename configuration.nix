@@ -50,7 +50,6 @@
 
     interfaces = {
       enp0s31f6.useDHCP = true; # Ethernet
-      enp43s0u1u3u1.useDHCP = true; # Icy Box IB-DK2106-C
       wlp0s20f3.useDHCP = true; # WiFi
     };
   };
