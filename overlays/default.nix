@@ -4,8 +4,9 @@
         super.fetchFromGitHub {
           owner = "vlaci";
           repo = "openconnect-sso";
-          rev = "v0.7.3";
-          sha256 = "126rm5zhdwxiyqv7fh2xilqw7q0s438d3laisjynlnc4ddnrdc3w";
+          # TODO pin version once issue https://github.com/vlaci/openconnect-sso/issues/55 is fixed
+          rev = "54da0073732cc1cb445360c3d6f0c915ae223ec8";
+          sha256 = "1bx93rj4bncmhm6vyiabxrv76s028zszwxdxncnx2q8zhc0wqqyr";
         }
       }/nix" { pkgs = super; }).openconnect-sso;
   })
