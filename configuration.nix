@@ -120,6 +120,7 @@
       pkgs.flameshot
       pkgs.git
       pkgs.git-crypt
+      pkgs.gitkraken
       pkgs.glances
       pkgs.gnome.dconf-editor
       pkgs.gnome.networkmanager-openconnect
