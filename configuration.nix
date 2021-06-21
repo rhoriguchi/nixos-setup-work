@@ -75,7 +75,7 @@
       rhoriguchi = {
         isNormalUser = true;
         password = (import ./secrets.nix).users.users.rhoriguchi.password;
-        extraGroups = [ "docker" "networkmanager" "plugdev" "wheel" ];
+        extraGroups = [ "docker" "networkmanager" "plugdev" "vboxusers" "wheel" ];
       };
     };
   };
@@ -194,7 +194,14 @@
 
   fonts.fonts = [ pkgs.montserrat ];
 
-  virtualisation.docker.enable = true;
+  virtualisation = {
+    docker.enable = true;
+
+    virtualbox.host = {
+      enable = true;
+      enableExtensionPack = true;
+    };
+  };
 
   programs = {
     dconf.enable = true;
