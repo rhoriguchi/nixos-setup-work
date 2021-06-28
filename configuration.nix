@@ -137,6 +137,7 @@
       pkgs.openconnect-sso
       pkgs.openssl
       pkgs.postman
+      pkgs.remmina
       pkgs.signal-desktop
       pkgs.spotify
       pkgs.sshpass
