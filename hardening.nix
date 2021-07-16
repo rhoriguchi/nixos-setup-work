@@ -4,6 +4,7 @@
   security = {
     # TODO figure out how it works now
     # apparmor.profiles = [ "${pkgs.apparmor-profiles}/share/apparmor/extra-profiles" ];
+    # apparmor.policies.profile = builtins.concatStringsSep "\n" [ "${pkgs.apparmor-profiles}/share/apparmor/extra-profiles" ];
 
     lockKernelModules = false;
   };
