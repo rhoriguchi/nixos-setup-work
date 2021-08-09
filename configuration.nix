@@ -137,7 +137,10 @@
       pkgs.ntfs3g
       pkgs.openconnect-sso
       pkgs.openssl
+      pkgs.pipenv
       pkgs.postman
+      pkgs.python3
+      pkgs.python3Packages.pip
       pkgs.remmina
       pkgs.signal-desktop
       pkgs.spotify
