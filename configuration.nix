@@ -115,7 +115,6 @@
 
     systemPackages = [
       pkgs.alacritty
-      pkgs.busybox
       pkgs.curl
       pkgs.firefox
       pkgs.flameshot
