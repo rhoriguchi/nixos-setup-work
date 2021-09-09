@@ -1,3 +1,5 @@
 rhoriguchi/maven/settings.xml filter=git-crypt diff=git-crypt
 rhoriguchi/npm/.npmrc filter=git-crypt diff=git-crypt
 secrets.nix filter=git-crypt diff=git-crypt
+
+overlays/citrix_workspace/citrix_workspace_21.6.0.28.tar.gz filter=lfs diff=lfs merge=lfs -text

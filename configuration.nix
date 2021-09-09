@@ -115,6 +115,7 @@
 
     systemPackages = [
       pkgs.alacritty
+      pkgs.citrix_workspace
       pkgs.curl
       pkgs.firefox
       pkgs.flameshot
