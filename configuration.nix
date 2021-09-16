@@ -117,6 +117,7 @@
       pkgs.alacritty
       pkgs.citrix_workspace
       pkgs.curl
+      pkgs.docker-compose
       pkgs.firefox
       pkgs.flameshot
       pkgs.git
