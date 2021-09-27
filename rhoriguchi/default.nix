@@ -18,6 +18,7 @@ in {
     (import "${rhoriguchi}/zsh.nix")
 
     ./autostart.nix
+    ./citrix
     ./docker.nix
     ./firefox
     ./maven
