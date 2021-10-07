@@ -128,6 +128,7 @@
       pkgs.gnome.dconf-editor
       pkgs.gnome.networkmanager-openconnect
       pkgs.google-chrome
+      pkgs.graphviz
       pkgs.haskellPackages.nixfmt
       pkgs.htop
       # TODO remove when lombok - spring issue is solved
