@@ -130,6 +130,8 @@
       pkgs.google-chrome
       pkgs.haskellPackages.nixfmt
       pkgs.htop
+      # TODO remove when lombok - spring issue is solved
+      pkgs.jdk
       pkgs.jetbrains.idea-ultimate
       pkgs.kubernetes
       pkgs.libreoffice-fresh
@@ -233,7 +235,12 @@
 
     zsh.enable = true;
 
-    java.enable = true;
+    java = {
+      enable = true;
+
+      # TODO remove when lombok - spring issue is solved
+      package = pkgs.jdk11;
+    };
 
     npm.enable = true;
   };
