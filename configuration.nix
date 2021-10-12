@@ -143,6 +143,7 @@
       pkgs.openconnect-sso
       pkgs.openssl
       pkgs.pipenv
+      pkgs.postgresql_13
       pkgs.postman
       pkgs.python3
       pkgs.python3Packages.pip
