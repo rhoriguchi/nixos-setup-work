@@ -1,6 +1,6 @@
 { lib, ... }: {
-  home-manager.users.rhoriguchi.home.file.".m2/settings.xml".text = lib.replaceStrings [ "USER_NAME" "USER_ENCRYPTED_PASSWORD" ] [
+  home-manager.users.rhoriguchi.home.file.".m2/settings.xml".text = lib.replaceStrings [ "USERNAME" "CREDENTIAL" ] [
     "ryan.horiguchi@mimacom.com"
-    (import ../../secrets.nix).maven.encryptedPassword
+    (import ../../secrets.nix).maven.credential
   ] (builtins.readFile ./settings.xml);
 }
