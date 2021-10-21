@@ -14,7 +14,6 @@ in {
     (import "${rhoriguchi}/htop.nix")
     (import "${rhoriguchi}/onedrive.nix")
     (import "${rhoriguchi}/ssh.nix")
-    (import "${rhoriguchi}/vscode.nix")
     (import "${rhoriguchi}/zsh.nix")
 
     ./autostart.nix
@@ -23,6 +22,7 @@ in {
     ./firefox
     ./maven
     ./npm
+    ./vscode.nix
   ];
 
   home-manager.users.rhoriguchi = {
