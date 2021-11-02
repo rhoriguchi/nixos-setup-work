@@ -81,8 +81,9 @@
   };
 
   environment = {
-    variables = {
+    variables = rec {
       EDITOR = "nano";
+      KUBE_EDITOR = EDITOR;
       NIXPKGS_ALLOW_UNFREE = "1";
       TERMINAL = "alacritty";
     };
