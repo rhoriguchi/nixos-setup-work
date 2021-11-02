@@ -135,6 +135,7 @@
       # TODO remove when lombok - spring issue is solved
       pkgs.jdk
       pkgs.jetbrains.idea-ultimate
+      pkgs.k9s
       pkgs.kubernetes
       pkgs.libreoffice-fresh
       pkgs.maven
