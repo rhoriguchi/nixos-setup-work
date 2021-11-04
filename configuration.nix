@@ -154,6 +154,7 @@
       pkgs.spotify
       pkgs.sshpass
       pkgs.teams
+      pkgs.tree
       pkgs.unzip
       pkgs.vscode
       pkgs.yarn
