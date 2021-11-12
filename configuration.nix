@@ -119,6 +119,7 @@
       pkgs.citrix_workspace
       pkgs.curl
       pkgs.docker-compose
+      pkgs.file
       pkgs.firefox
       pkgs.flameshot
       pkgs.git
