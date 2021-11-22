@@ -11,6 +11,7 @@
         pkgs.firefox-addons.facebook-container
         pkgs.firefox-addons.grammarly
         pkgs.firefox-addons.https-everywhere
+        pkgs.firefox-addons.multi-account-containers
         pkgs.firefox-addons.octolinker
         pkgs.firefox-addons.open-in-browser
         pkgs.firefox-addons.privacy-badger
