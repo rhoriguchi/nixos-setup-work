@@ -133,8 +133,7 @@
       pkgs.graphviz
       pkgs.haskellPackages.nixfmt
       pkgs.htop
-      # TODO remove when lombok - spring issue is solved
-      pkgs.jdk
+      pkgs.jdk # TODO remove when lombok - spring issue is solved
       pkgs.jetbrains.idea-ultimate
       pkgs.k9s
       pkgs.kubernetes
@@ -157,6 +156,7 @@
       pkgs.teams
       pkgs.tree
       pkgs.unzip
+      pkgs.vlc
       pkgs.vscode
       pkgs.yarn
     ];
