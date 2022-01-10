@@ -172,21 +172,15 @@
       xkbModel = "pc105";
       xkbVariant = "de_nodeadkeys";
 
-      displayManager = {
-        gdm = {
-          enable = true;
-          # TODO remove once teams screen sharing works with wayland
-          wayland = false;
-        };
-
-        sessionCommands = "${lib.getBin pkgs.xorg.xrandr}/bin/xrandr --setprovideroutputsource 2 0";
+      displayManager.gdm = {
+        enable = true;
+        # TODO remove once teams screen sharing works with wayland
+        wayland = false;
       };
 
       desktopManager.gnome.enable = true;
 
       libinput.enable = true;
-
-      videoDrivers = [ "displaylink" "modesetting" ];
     };
 
     gnome = {
