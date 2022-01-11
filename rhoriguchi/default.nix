@@ -27,17 +27,8 @@ in {
   ];
 
   home-manager.users.rhoriguchi = {
-    dconf.settings = {
-      "org/gnome/desktop/background".picture-uri =
-        lib.mkForce "file://${pkgs.nixos-artwork.wallpapers.simple-dark-gray-bottom.gnomeFilePath}";
-
-      # TODO remove once suspend works again
-      "org/gnome/settings-daemon/plugins/power" = {
-        power-button-action = "nothing";
-        sleep-inactive-ac-type = "nothing";
-        sleep-inactive-battery-type = "nothing";
-      };
-    };
+    dconf.settings."org/gnome/desktop/background".picture-uri =
+      lib.mkForce "file://${pkgs.nixos-artwork.wallpapers.simple-dark-gray-bottom.gnomeFilePath}";
 
     programs = {
       git = {
