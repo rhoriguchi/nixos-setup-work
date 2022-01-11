@@ -27,6 +27,7 @@
           "https://todoist.com/app/project/2207281498"
           "https://outlook.office.com/mail/inbox"
           "https://outlook.office.com/calendar/view/month"
+          "https://wd3.myworkday.com/flowable"
         ]);
       };
     };
