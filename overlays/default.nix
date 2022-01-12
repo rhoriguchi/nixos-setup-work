@@ -1,5 +1,7 @@
 [
   (self: super: {
+    citrix_workspace = super.callPackage ./citrix_workspace { inherit (super) citrix_workspace; };
+
     openconnect-sso = (super.callPackage "${
         super.fetchFromGitHub {
           owner = "vlaci";
@@ -9,6 +11,4 @@
         }
       }/nix" { pkgs = super; }).openconnect-sso;
   })
-
-  (self: super: { citrix_workspace = super.callPackage ./citrix_workspace { inherit (super) citrix_workspace; }; })
 ]
