@@ -21,7 +21,7 @@
     overlays = (import "${(import ./rhoriguchi-nixos-setup.nix).path}/configuration/overlays") ++ (import ./overlays);
   };
 
-  nix.autoOptimiseStore = true;
+  nix.settings.auto-optimise-store = true;
 
   system.stateVersion = "22.05";
 
