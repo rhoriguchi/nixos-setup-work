@@ -169,7 +169,7 @@
       pkgs.python3Packages.pip
       pkgs.remmina
       pkgs.signal-desktop
-      pkgs.spotify
+      pkgs.spotify-unwrapped
       pkgs.sshpass
       pkgs.teams
       pkgs.tree
