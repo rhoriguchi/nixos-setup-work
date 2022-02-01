@@ -21,7 +21,13 @@
     overlays = (import "${(import ./rhoriguchi-nixos-setup.nix).path}/configuration/overlays") ++ (import ./overlays);
   };
 
-  nix.settings.auto-optimise-store = true;
+  nix = {
+    package = pkgs.nixUnstable;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+    settings.auto-optimise-store = true;
+  };
 
   system.stateVersion = "22.05";
 
