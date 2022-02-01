@@ -58,6 +58,18 @@
       enp0s31f6.useDHCP = true; # Ethernet
       wlp0s20f3.useDHCP = true; # WiFi
     };
+
+    networkmanager.unmanaged = [ "wlp0s20f3" ];
+
+    wireless = {
+      enable = true;
+      userControlled.enable = true;
+      extraConfig = ''
+        p2p_disabled=1
+      '';
+
+      networks = (import ./secrets.nix).networking.wireless.networks;
+    };
   };
 
   hardware = {
@@ -164,6 +176,7 @@
       pkgs.unzip
       pkgs.vlc
       pkgs.vscode
+      pkgs.wpa_supplicant_gui
       pkgs.yarn
     ];
   };
