@@ -153,7 +153,6 @@
       pkgs.graphviz
       pkgs.haskellPackages.nixfmt
       pkgs.htop
-      pkgs.jdk # TODO remove when lombok - spring issue is solved
       pkgs.jetbrains.idea-ultimate
       pkgs.k9s
       pkgs.kubernetes
@@ -256,12 +255,7 @@
 
     zsh.enable = true;
 
-    java = {
-      enable = true;
-
-      # TODO remove when lombok - spring issue is solved
-      package = pkgs.jdk11;
-    };
+    java.enable = true;
 
     npm.enable = true;
   };
