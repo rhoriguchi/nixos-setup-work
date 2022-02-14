@@ -1,6 +1,8 @@
 { pkgs, lib, ... }: {
   imports = [ <nixpkgs/nixos/modules/profiles/hardened.nix> ];
 
+  boot.kernel.sysctl."kernel.unprivileged_userns_clone" = 1;
+
   security = {
     # apparmor.policies."extra-profiles" = let
     #   excludePolicies = [ "README" ];

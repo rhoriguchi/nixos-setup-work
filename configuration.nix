@@ -10,14 +10,9 @@ in {
     ./hardware-configuration.nix
   ];
 
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-
-    # TODO remove when namespace with chrome works
-    kernelPackages = pkgs.linuxPackages_5_4;
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
   };
 
   nixpkgs = {
