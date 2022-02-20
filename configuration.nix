@@ -133,6 +133,7 @@ in {
 
     systemPackages = [
       pkgs.alacritty
+      pkgs.bat
       pkgs.citrix_workspace
       pkgs.curl
       pkgs.docker-compose

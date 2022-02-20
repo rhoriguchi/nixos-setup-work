@@ -7,6 +7,7 @@ in {
     (import "${configuration}/home-manager.nix")
 
     (import "${rhoriguchi}/alacritty.nix")
+    (import "${rhoriguchi}/bat.nix")
     (import "${rhoriguchi}/conky.nix")
     (import "${rhoriguchi}/flameshot.nix")
     (import "${rhoriguchi}/fzf.nix")
