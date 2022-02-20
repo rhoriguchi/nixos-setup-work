@@ -23,6 +23,7 @@ in {
     ./docker.nix
     ./firefox
     ./maven
+    ./nautilus.nix
     ./npm
     ./vscode.nix
   ];
