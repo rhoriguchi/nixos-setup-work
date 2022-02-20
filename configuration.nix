@@ -105,11 +105,6 @@ in {
       TERMINAL = "alacritty";
     };
 
-    shellAliases = {
-      l = null;
-      ll = null;
-    };
-
     gnome.excludePackages = [
       pkgs.gnome-connections
       pkgs.gnome-photos
