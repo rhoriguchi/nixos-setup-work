@@ -172,6 +172,7 @@ in {
       pkgs.vscode
       pkgs.wpa_supplicant_gui
       pkgs.yarn
+      pkgs.zip
     ];
   };
 
