@@ -153,7 +153,6 @@ in {
       pkgs.maven
       pkgs.nodejs
       pkgs.nodePackages.prettier
-      pkgs.ntfs3g # TODO can be removed with kernel 5.15
       pkgs.openconnect-sso
       pkgs.openssl
       pkgs.pipenv
