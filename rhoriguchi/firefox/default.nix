@@ -5,6 +5,7 @@
     programs.firefox = {
       extensions = lib.mkForce [
         pkgs.firefox-addons.bitwarden
+        pkgs.firefox-addons.bypass-paywalls-clean
         pkgs.firefox-addons.export-tabs-urls-and-titles
         pkgs.firefox-addons.facebook-container
         pkgs.firefox-addons.grammarly
