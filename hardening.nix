@@ -53,4 +53,6 @@
     [org.gnome.desktop.session]
     idle-delay=${toString (5 * 60)}
   '';
+
+  virtualisation.virtualbox.host.enableHardening = true;
 }
