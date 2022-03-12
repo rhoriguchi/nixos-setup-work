@@ -222,7 +222,8 @@ in {
 
     virtualbox.host = {
       enable = true;
-      enableExtensionPack = true;
+      # TODO commented till https://github.com/NixOS/nixpkgs/issues/163831 resolved
+      # enableExtensionPack = true;
     };
   };
 
