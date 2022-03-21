@@ -10,7 +10,6 @@
     ./gnome.nix
     ./maven
     ./nautilus.nix
-    ./nautilus.nix
     ./npm
     ./ssh.nix
     ./vscode.nix
