@@ -3,6 +3,7 @@ let configuration = "${(import ./rhoriguchi-nixos-setup.nix).path}/configuration
 in {
   imports = [
     (import "${configuration}/displaylink.nix")
+    (import "${configuration}/printing.nix")
 
     ./hardening.nix
     ./rhoriguchi
@@ -200,13 +201,6 @@ in {
       chrome-gnome-shell.enable = false;
       gnome-initial-setup.enable = false;
       gnome-online-accounts.enable = false;
-    };
-
-    printing = {
-      enable = true;
-
-      drivers = [ pkgs.gutenprint ];
-      webInterface = false;
     };
 
     onedrive.enable = true;
