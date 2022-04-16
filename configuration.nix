@@ -58,6 +58,40 @@ in {
     openrazer.enable = true;
   };
 
+  services = {
+    xserver = {
+      # TODO remove once teams screen sharing works with wayland
+      displayManager.gdm.wayland = false;
+
+      libinput.enable = true;
+    };
+
+    onedrive.enable = true;
+  };
+
+  virtualisation = {
+    docker.enable = true;
+
+    virtualbox.host = {
+      enable = true;
+      # TODO commented till https://github.com/NixOS/nixpkgs/issues/163831 resolved
+      # enableExtensionPack = true;
+    };
+  };
+
+  programs = {
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+
+    zsh.enable = true;
+
+    java.enable = true;
+
+    npm.enable = true;
+  };
+
   environment = {
     variables = {
       KUBE_EDITOR = "nano";
@@ -109,40 +143,6 @@ in {
       pkgs.yarn
       pkgs.zip
     ];
-  };
-
-  services = {
-    xserver = {
-      # TODO remove once teams screen sharing works with wayland
-      displayManager.gdm.wayland = false;
-
-      libinput.enable = true;
-    };
-
-    onedrive.enable = true;
-  };
-
-  virtualisation = {
-    docker.enable = true;
-
-    virtualbox.host = {
-      enable = true;
-      # TODO commented till https://github.com/NixOS/nixpkgs/issues/163831 resolved
-      # enableExtensionPack = true;
-    };
-  };
-
-  programs = {
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
-
-    zsh.enable = true;
-
-    java.enable = true;
-
-    npm.enable = true;
   };
 
   users = {
