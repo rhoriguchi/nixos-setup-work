@@ -5,6 +5,7 @@ in {
     (import "${configs}/displaylink.nix")
     (import "${configs}/gnome.nix")
     (import "${configs}/i18n.nix")
+    (import "${configs}/keyboard.nix")
     (import "${configs}/printing.nix")
 
     ./hardening.nix
@@ -126,14 +127,8 @@ in {
     ];
   };
 
-  console.useXkbConfig = true;
-
   services = {
     xserver = {
-      layout = "ch";
-      xkbModel = "pc105";
-      xkbVariant = "de_nodeadkeys";
-
       # TODO remove once teams screen sharing works with wayland
       displayManager.gdm.wayland = false;
 
