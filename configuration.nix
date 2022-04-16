@@ -71,21 +71,6 @@ in {
     openrazer.enable = true;
   };
 
-  users = {
-    defaultUserShell = pkgs.zsh;
-    mutableUsers = false;
-
-    users = {
-      root.hashedPassword = "*";
-
-      rhoriguchi = {
-        isNormalUser = true;
-        password = (import ./secrets.nix).users.users.rhoriguchi.password;
-        extraGroups = [ "docker" "networkmanager" "plugdev" "vboxusers" "wheel" ];
-      };
-    };
-  };
-
   environment = {
     variables = rec {
       EDITOR = "nano";
@@ -192,5 +177,20 @@ in {
     java.enable = true;
 
     npm.enable = true;
+  };
+
+  users = {
+    defaultUserShell = pkgs.zsh;
+    mutableUsers = false;
+
+    users = {
+      root.hashedPassword = "*";
+
+      rhoriguchi = {
+        isNormalUser = true;
+        password = (import ./secrets.nix).users.users.rhoriguchi.password;
+        extraGroups = [ "docker" "networkmanager" "plugdev" "vboxusers" "wheel" ];
+      };
+    };
   };
 }
