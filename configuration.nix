@@ -208,8 +208,6 @@ in {
     udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
   };
 
-  fonts.fonts = [ pkgs.montserrat ];
-
   virtualisation = {
     docker.enable = true;
 
