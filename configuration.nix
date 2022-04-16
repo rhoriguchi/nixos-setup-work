@@ -3,6 +3,7 @@ let configs = "${(import ./rhoriguchi-nixos-setup.nix).path}/configuration/confi
 in {
   imports = [
     (import "${configs}/displaylink.nix")
+    (import "${configs}/gnome.nix")
     (import "${configs}/printing.nix")
 
     ./hardening.nix
@@ -106,27 +107,6 @@ in {
       TERMINAL = "alacritty";
     };
 
-    gnome.excludePackages = [
-      pkgs.gnome-connections
-      pkgs.gnome-photos
-      pkgs.gnome.epiphany
-      pkgs.gnome.geary
-      pkgs.gnome.gnome-calendar
-      pkgs.gnome.gnome-characters
-      pkgs.gnome.gnome-clocks
-      pkgs.gnome.gnome-contacts
-      pkgs.gnome.gnome-font-viewer
-      pkgs.gnome.gnome-logs
-      pkgs.gnome.gnome-maps
-      pkgs.gnome.gnome-music
-      pkgs.gnome.gnome-screenshot
-      pkgs.gnome.gnome-terminal
-      pkgs.gnome.gnome-weather
-      pkgs.gnome.simple-scan
-      pkgs.gnome.totem
-      pkgs.gnome.yelp
-    ];
-
     systemPackages = [
       pkgs.alacritty
       pkgs.bat
@@ -141,8 +121,6 @@ in {
       pkgs.git-lfs
       pkgs.gitkraken
       pkgs.glances
-      pkgs.gnome.dconf-editor
-      pkgs.gnome.networkmanager-openconnect
       pkgs.google-chrome
       pkgs.graphviz
       pkgs.haskellPackages.nixfmt
@@ -180,32 +158,17 @@ in {
 
   services = {
     xserver = {
-      enable = true;
-
       layout = "ch";
       xkbModel = "pc105";
       xkbVariant = "de_nodeadkeys";
 
-      displayManager.gdm = {
-        enable = true;
-        # TODO remove once teams screen sharing works with wayland
-        wayland = false;
-      };
-
-      desktopManager.gnome.enable = true;
+      # TODO remove once teams screen sharing works with wayland
+      displayManager.gdm.wayland = false;
 
       libinput.enable = true;
     };
 
-    gnome = {
-      chrome-gnome-shell.enable = false;
-      gnome-initial-setup.enable = false;
-      gnome-online-accounts.enable = false;
-    };
-
     onedrive.enable = true;
-
-    udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
   };
 
   virtualisation = {
@@ -219,8 +182,6 @@ in {
   };
 
   programs = {
-    dconf.enable = true;
-
     nano = {
       nanorc = ''
         set constantshow
