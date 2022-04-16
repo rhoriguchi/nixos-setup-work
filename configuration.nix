@@ -1,9 +1,9 @@
 { pkgs, lib, ... }:
-let configuration = "${(import ./rhoriguchi-nixos-setup.nix).path}/configuration";
+let configs = "${(import ./rhoriguchi-nixos-setup.nix).path}/configuration/configs";
 in {
   imports = [
-    (import "${configuration}/displaylink.nix")
-    (import "${configuration}/printing.nix")
+    (import "${configs}/displaylink.nix")
+    (import "${configs}/printing.nix")
 
     ./hardening.nix
     ./rhoriguchi
