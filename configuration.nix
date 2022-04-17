@@ -9,6 +9,7 @@ in {
     (import "${configs}/nix.nix")
     (import "${configs}/power-management.nix")
     (import "${configs}/printing.nix")
+    (import "${configs}/zsh.nix")
 
     ./hardening.nix
     ./rhoriguchi
@@ -86,8 +87,6 @@ in {
       enableSSHSupport = true;
     };
 
-    zsh.enable = true;
-
     java.enable = true;
 
     npm.enable = true;
@@ -147,7 +146,6 @@ in {
   };
 
   users = {
-    defaultUserShell = pkgs.zsh;
     mutableUsers = false;
 
     users = {
