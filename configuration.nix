@@ -7,6 +7,7 @@ in {
     (import "${configs}/i18n.nix")
     (import "${configs}/keyboard.nix")
     (import "${configs}/nix.nix")
+    (import "${configs}/power-management.nix")
     (import "${configs}/printing.nix")
 
     ./hardening.nix
