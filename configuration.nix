@@ -7,6 +7,7 @@ in {
     (import "${configs}/i18n.nix")
     (import "${configs}/keyboard.nix")
     (import "${configs}/nix.nix")
+    (import "${configs}/podman.nix")
     (import "${configs}/power-management.nix")
     (import "${configs}/printing.nix")
     (import "${configs}/zsh.nix")
@@ -71,14 +72,10 @@ in {
     onedrive.enable = true;
   };
 
-  virtualisation = {
-    docker.enable = true;
-
-    virtualbox.host = {
-      enable = true;
-      # TODO commented till https://github.com/NixOS/nixpkgs/issues/163831 resolved
-      # enableExtensionPack = true;
-    };
+  virtualisation.virtualbox.host = {
+    enable = true;
+    # TODO commented till https://github.com/NixOS/nixpkgs/issues/163831 resolved
+    # enableExtensionPack = true;
   };
 
   programs = {
@@ -105,7 +102,6 @@ in {
       pkgs.bat
       pkgs.citrix_workspace
       pkgs.curl
-      pkgs.docker-compose
       pkgs.file
       pkgs.firefox
       pkgs.flameshot
@@ -155,7 +151,7 @@ in {
       rhoriguchi = {
         isNormalUser = true;
         password = (import ./secrets.nix).users.users.rhoriguchi.password;
-        extraGroups = [ "docker" "networkmanager" "plugdev" "vboxusers" "wheel" ];
+        extraGroups = [ "networkmanager" "plugdev" "podman" "vboxusers" "wheel" ];
       };
     };
   };
