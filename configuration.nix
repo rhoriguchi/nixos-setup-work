@@ -73,9 +73,8 @@ in {
   };
 
   environment = {
-    variables = rec {
-      EDITOR = "nano";
-      KUBE_EDITOR = EDITOR;
+    variables = {
+      KUBE_EDITOR = "nano";
       NIXPKGS_ALLOW_UNFREE = "1";
       TERMINAL = "alacritty";
     };
@@ -149,19 +148,6 @@ in {
   };
 
   programs = {
-    nano = {
-      nanorc = ''
-        set constantshow
-        set linenumbers
-        set softwrap
-        set tabsize 4
-        set tabstospaces
-        unset nonewlines
-      '';
-
-      syntaxHighlight = true;
-    };
-
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
