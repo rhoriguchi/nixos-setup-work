@@ -6,6 +6,7 @@ in {
     (import "${configs}/gnome.nix")
     (import "${configs}/i18n.nix")
     (import "${configs}/keyboard.nix")
+    (import "${configs}/nix.nix")
     (import "${configs}/printing.nix")
 
     ./hardening.nix
@@ -19,24 +20,9 @@ in {
     efi.canTouchEfiVariables = true;
   };
 
-  nixpkgs = {
-    config.allowUnfree = true;
-    overlays = (import "${(import ./rhoriguchi-nixos-setup.nix).path}/configuration/overlays") ++ (import ./overlays);
-  };
-
-  nix = {
-    package = pkgs.nixUnstable;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-    settings.auto-optimise-store = true;
-  };
-
-  system.stateVersion = "22.05";
+  nixpkgs.overlays = (import ./overlays);
 
   time.timeZone = "Europe/Zurich";
-
-  documentation.doc.enable = false;
 
   networking = {
     hostName = "ryan-horiguchi-zrh";
@@ -75,7 +61,6 @@ in {
   environment = {
     variables = {
       KUBE_EDITOR = "nano";
-      NIXPKGS_ALLOW_UNFREE = "1";
       TERMINAL = "alacritty";
     };
 
