@@ -5,6 +5,7 @@ in {
     (import "${configs}/displaylink.nix")
     (import "${configs}/gnome.nix")
     (import "${configs}/i18n.nix")
+    (import "${configs}/java.nix")
     (import "${configs}/keyboard.nix")
     (import "${configs}/nix.nix")
     (import "${configs}/podman.nix")
@@ -87,8 +88,6 @@ in {
 
     htop.enable = true;
 
-    java.enable = true;
-
     npm.enable = true;
   };
 
@@ -118,7 +117,6 @@ in {
       pkgs.k9s
       pkgs.kubernetes
       pkgs.libreoffice-fresh
-      pkgs.maven
       pkgs.nodejs
       pkgs.nodePackages.prettier
       pkgs.openconnect-sso
