@@ -6,6 +6,7 @@ in {
     (import "${configs}/gnome.nix")
     (import "${configs}/i18n.nix")
     (import "${configs}/java.nix")
+    (import "${configs}/javascript.nix")
     (import "${configs}/keyboard.nix")
     (import "${configs}/nix.nix")
     (import "${configs}/podman.nix")
@@ -87,8 +88,6 @@ in {
     };
 
     htop.enable = true;
-
-    npm.enable = true;
   };
 
   environment = {
@@ -117,8 +116,6 @@ in {
       pkgs.k9s
       pkgs.kubernetes
       pkgs.libreoffice-fresh
-      pkgs.nodejs
-      pkgs.nodePackages.prettier
       pkgs.openconnect-sso
       pkgs.openssl
       pkgs.postgresql_13
@@ -133,7 +130,6 @@ in {
       pkgs.vlc
       pkgs.vscode
       pkgs.wpa_supplicant_gui
-      pkgs.yarn
       pkgs.zip
     ];
   };
