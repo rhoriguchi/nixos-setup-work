@@ -10,6 +10,7 @@ in {
     (import "${configs}/podman.nix")
     (import "${configs}/power-management.nix")
     (import "${configs}/printing.nix")
+    (import "${configs}/python.nix")
     (import "${configs}/zsh.nix")
 
     ./hardening.nix
@@ -122,11 +123,8 @@ in {
       pkgs.nodePackages.prettier
       pkgs.openconnect-sso
       pkgs.openssl
-      pkgs.pipenv
       pkgs.postgresql_13
       pkgs.postman
-      pkgs.python3
-      pkgs.python3Packages.pip
       pkgs.remmina
       pkgs.signal-desktop
       pkgs.spotify-unwrapped
