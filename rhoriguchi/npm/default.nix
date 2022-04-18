@@ -3,5 +3,5 @@
     "ryan.horiguchi@mimacom.com"
     (import ../../secrets.nix).node.credentials.default
     (import ../../secrets.nix).node.credentials.flowable
-  ] (builtins.readFile ./.npmrc);
+  ] (lib.readFile ./.npmrc);
 }

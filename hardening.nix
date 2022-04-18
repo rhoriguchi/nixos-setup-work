@@ -8,17 +8,17 @@
     #   excludePolicies = [ "README" ];
 
     #   dir = "${pkgs.apparmor-profiles}/share/apparmor/extra-profiles";
-    #   policies = lib.filterAttrs (key: _: !(builtins.elem key excludePolicies)) (builtins.readDir dir);
+    #   policies = lib.filterAttrs (key: _: !(lib.elem key excludePolicies)) (builtins.readDir dir);
     # in {
     #   enable = true;
-    #   profile = builtins.concatStringsSep "\n" (lib.mapAttrsToList (key: _: ''include "${dir}/${key}"'') policies);
+    #   profile = lib.concatStringsSep "\n" (lib.mapAttrsToList (key: _: ''include "${dir}/${key}"'') policies);
     # };
 
     # apparmor.policies = let
     #   excludePolicies = [ "README" ];
 
     #   dir = "${pkgs.apparmor-profiles}/share/apparmor/extra-profiles";
-    #   policies = lib.filterAttrs (key: _: !(builtins.elem key excludePolicies)) (builtins.readDir dir);
+    #   policies = lib.filterAttrs (key: _: !(lib.elem key excludePolicies)) (builtins.readDir dir);
     # in lib.mapAttrs (key: _: {
     #   enable = true;
 
