@@ -8,6 +8,7 @@ in {
     (import "${configs}/java.nix")
     (import "${configs}/javascript.nix")
     (import "${configs}/keyboard.nix")
+    (import "${configs}/kotlin.nix")
     (import "${configs}/nix.nix")
     (import "${configs}/podman.nix")
     (import "${configs}/power-management.nix")
