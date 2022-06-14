@@ -118,7 +118,7 @@ in {
       pkgs.libreoffice-fresh
       pkgs.openconnect-sso
       pkgs.openssl
-      pkgs.postgresql_13
+      pkgs.postgresql
       pkgs.postman
       pkgs.remmina
       pkgs.signal-desktop
