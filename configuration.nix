@@ -112,7 +112,6 @@ in {
       pkgs.glances
       pkgs.google-chrome
       pkgs.graphviz
-      pkgs.haskellPackages.nixfmt
       pkgs.jetbrains.idea-ultimate
       pkgs.k9s
       pkgs.kubernetes
