@@ -5,7 +5,7 @@
     ./autostart.nix
     ./citrix
     ./docker.nix
-    ./firefox
+    ./firefox.nix
     ./git.nix
     ./gnome.nix
     ./maven
