@@ -32,7 +32,7 @@ let
     patches = [ ./gst-plugins-base/fix_build_input.patch ];
   };
 in citrix_workspace.overrideAttrs (oldAttrs: {
-  src = assert oldAttrs.version == "22.5.0.16"; ./citrix_workspace_22.5.0.16.tar.gz;
+  src = assert oldAttrs.version == "22.7.0.20"; ./citrix_workspace_22.7.0.20.tar.gz;
 
   hxdSrc = ./hdx_realtime_media_engine/hdx_realtime_media_engine_2.9.400-2702.deb;
 
